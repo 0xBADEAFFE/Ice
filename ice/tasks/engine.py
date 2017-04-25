@@ -2,9 +2,9 @@
 
 import os
 
-from pysteam import paths as steam_paths
-from pysteam import shortcuts
-from pysteam import steam as steam_module
+from ice import steam_paths
+from ice import shortcuts
+from ice import steam as steam_module
 
 from ice import backups
 from ice import configuration

@@ -13,7 +13,7 @@ Functionality should be added to this class if it heavily involves the use of
 ROMs
 """
 
-from pysteam import model
+from ice import steam_model
 
 import emulators
 import paths
@@ -45,19 +45,19 @@ def rom_shortcut_name(rom):
 
 
 def rom_to_shortcut(rom):
-    emu = rom.console.emulator
-    assert(emu is not None)
+  emu = rom.console.emulator
+  assert(emu is not None)
 
-    return model.Shortcut(
-        name = rom_shortcut_name(rom),
-        exe = emulators.emulator_rom_exe(emu),
-        startdir = emulators.emulator_startdir(emu),
-        icon = rom.console.icon,
-        shortcut_path = "",
-        launch_options = emulators.emulator_rom_launch_options(emu, rom),
-        hidden = False,
-        allow_desktop_config = True,
-        open_vr = False,
-        last_play_time = 0,
-        tags = [rom.console.fullname]
-    )
+  return steam_model.Shortcut(
+    name                 = rom_shortcut_name(rom),
+    exe                  = emulators.emulator_rom_exe(emu),
+    startdir             = emulators.emulator_startdir(emu),
+    icon                 = rom.console.icon,
+    shortcut_path        = "",
+    launch_options       = emulators.emulator_rom_launch_options(emu, rom),
+    hidden               = False,
+    allow_desktop_config = False,
+    open_vr              = False,
+    last_play_time       = 0,
+    tags                 = [rom.console.fullname]
+  )

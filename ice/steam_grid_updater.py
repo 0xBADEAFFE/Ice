@@ -1,6 +1,6 @@
 
-from pysteam import grid
-from pysteam import shortcuts
+from ice import grid
+from ice import shortcuts
 
 import roms
 

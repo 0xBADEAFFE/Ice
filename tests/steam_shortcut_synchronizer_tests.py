@@ -3,8 +3,8 @@ import unittest
 
 from mockito import *
 
-from pysteam import model as steam_model
-from pysteam import shortcuts
+from ice import steam_model
+from ice import shortcuts
 
 from ice import model
 from ice import steam_shortcut_synchronizer

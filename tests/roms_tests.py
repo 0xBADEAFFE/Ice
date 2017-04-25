@@ -8,7 +8,7 @@ from mockito import *
 
 from nose_parameterized import parameterized
 
-from pysteam import model as steam_model
+from ice import steam_model
 
 from ice import model
 from ice import paths

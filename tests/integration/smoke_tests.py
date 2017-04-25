@@ -2,7 +2,7 @@
 import os
 import unittest
 
-from pysteam import model
+from ice import steam_model
 
 from ..testinfra.fake_environment import FakeEnvironment
 

@@ -6,8 +6,8 @@ import random
 import shutil
 import tempfile
 
-from pysteam import model as steam_model
-from pysteam import paths
+from ice import model as steam_model
+from ice import paths
 
 from ice import model
 from ice import roms

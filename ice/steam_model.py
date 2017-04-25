@@ -1,0 +1,35 @@
+
+import collections
+
+# Represents a single shortcut on the user's machine. These are the 5 fields
+# which are stored in shortcuts.vdf.
+Shortcut = collections.namedtuple('Shortcut', [
+  'name',                  # str
+  'exe',                   # str
+  'startdir',              # str
+  'icon',                  # str
+  'shortcut_path',         # str
+  'launch_options',        # str
+  'hidden',                # bool
+  'allow_desktop_config',  # bool
+  'open_vr',               # bool
+  'last_play_time',        # int
+  'tags',                  # []
+])
+
+# Represents a Steam installation. Since we don't really care about where the
+# actual guts of Steam are located, the only property on this object is the
+# location of the userdata directory (much more interesting).
+Steam = collections.namedtuple('Steam', [
+  'userdata_directory',
+])
+
+# A simple composite object that encapsulates a local steam installation
+# with a user id. Since basically everything that you would want pysteam to do
+# is scoped within a single user on the system (set custom images, add/remove
+# shortcuts, etc), most functions take this as a parameter so they dont need to
+# take both a Steam installation and a user id.
+LocalUserContext = collections.namedtuple('LocalUserContext', [
+  'steam',
+  'user_id',
+])

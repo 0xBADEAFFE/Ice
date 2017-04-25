@@ -7,9 +7,9 @@ import tempfile
 import traceback
 
 from functools import partial
-from pysteam import model
-from pysteam import paths
-from pysteam import shortcuts
+from ice import steam_model
+from ice import steam_paths
+from ice import shortcuts
 
 from ice import configuration
 from ice.cli import CommandLineRunner

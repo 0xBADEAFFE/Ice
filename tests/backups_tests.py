@@ -9,8 +9,8 @@ from mockito import *
 
 from nose_parameterized import parameterized
 
-from pysteam import model
-from pysteam import shortcuts
+from ice import steam_model
+from ice import shortcuts
 
 from ice import backups
 from ice import paths

@@ -7,7 +7,7 @@ Copyright (c) 2014 Scott Rice. All rights reserved.
 
 import argparse
 
-from pysteam.steam import get_steam, Steam
+from ice.steam import get_steam, Steam
 
 import tasks
 

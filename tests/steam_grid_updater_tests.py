@@ -5,8 +5,8 @@ import unittest
 
 from mockito import *
 
-from pysteam import grid
-from pysteam import shortcuts
+from ice import grid
+from ice import shortcuts
 
 from ice import model
 from ice import roms
