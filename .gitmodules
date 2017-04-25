@@ -1,0 +1,3 @@
+[submodule "pysteam"]
+	path = pysteam
+	url = https://github.com/hermitmaster/pysteam.git

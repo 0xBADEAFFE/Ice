@@ -50,10 +50,9 @@ def create_stream_handler(level):
 
 def create_file_handler(level):
   path = paths.log_file_location()
-  # Since the logger is created so early in Ice's lifecycle (literally one of
-  # the first things, since it happens at import time) its possible that the
-  # application_data_directory (where the log file is stored) doesnt exist.
-  # Create it now
+  # Since the logger is created so early in Ice's lifecycle (import time)
+  # its possible that the application_data_directory (where the log file
+  # is stored) doesnt exist. Create it now
   directory = os.path.dirname(path)
   if not os.path.exists(directory):
     os.makedirs(directory)

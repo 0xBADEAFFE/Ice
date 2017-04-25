@@ -22,12 +22,11 @@ class RealFilesystem(object):
 
   def _paths_in_directory(self, directory, incl_subdirs=False):
     assert self.is_directory(directory)
-    # Use glob instead of `os.listdir` to find files because glob will ignore
-    # hidden files. Or at least some hidden files. It ignores any file whose
-    # name starts with ".", which is basically equivalent to 'hidden files' on
-    # OSX/Linux, but means nothing on Windows. Still, its good enough, and I'd
-    # like to avoid having OS-specific 'ignore hidden files' logic in this file
-    # and let Python handle it instead.
+    # Use glob instead of `os.listdir` to find files because glob ignores some
+    # hidden files. It ignores any file whose name starts with ".", which is
+    # basically equivalent to 'hidden files' on OSX/Linux, but means nothing on
+    # Windows. Still, its good enough, and I'd like to avoid having OS-specific
+    # 'ignore hidden files' logic in this file and let Python handle it instead.
     pattern = os.path.join(directory, "*")
     result = glob.glob(pattern)
     # Unfortunately Python glob doesn't support `**` for matching 0 or 1
