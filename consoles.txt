@@ -28,7 +28,7 @@
 #   directory for ROMs (instead of the one it generates).
 #
 # Prefix: *optional* Text to append to the name of every game for the console.
-#   The name of the game as it appears in Steam will be 
+#   The name of the game as it appears in Steam will be
 #   "*Prefix* *ROM filename*". This is useful if you want to organize your Steam
 #   library in a way other than categories (for example, using the prefix
 #   '[NES]', or 'NES -')
@@ -51,16 +51,23 @@
 # icon=C:\Games\Super Nintendo\icon.png
 # images directory=C:\Games\Super Nintendo\Images
 #
+
+
+## Nintendo ##
+[Nintendo 64]
+nickname=N64
+emulator=
+
+[Nintendo DS]
+nickname=NDS
+emulator=
+
 [Nintendo Entertainment System]
 nickname=NES
 emulator=
 
-[Super Nintendo]
-nickname=SNES
-emulator=
-
-[Nintendo 64]
-nickname=N64
+[Nintendo Gameboy]
+nickname=GB
 emulator=
 
 [Nintendo Gamecube]
@@ -71,30 +78,35 @@ emulator=
 nickname=Wii
 emulator=
 
+[Gameboy Advance]
+nickname=GBA
+emulator=
+
+[Super Nintendo]
+nickname=SNES
+emulator=
+
+
+## Sony ##
 [Playstation 1]
 nickname=PS1
 emulator=
+extensions=m3u
 
 [Playstation 2]
 nickname=PS2
 emulator=
 
+
+##Sega##
 [Sega Genesis]
 nickname=Genesis
 emulator=
 
+[Sega Saturn]
+nickname=Saturn
+emulator=
+
 [Sega Dreamcast]
-nickname=Dreamcast
-emulator=
-
-[Nintendo Gameboy]
-nickname=Gameboy
-emulator=
-
-[Gameboy Advance]
-nickname=GBA
-emulator=
-
-[Nintendo DS]
-nickname=DS
+nickname=DC
 emulator=

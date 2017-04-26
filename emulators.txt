@@ -19,14 +19,14 @@
 # Example Windows Configuration
 # [Dolphin]
 # location=C:\Emulators\Dolphin\Dolphin.exe
-# command=%l --batch --exec=%r
+# command=--batch --exec=%r
 #
 # Example Mac Configuration
 # [Mednafen]
 # location=/Emulators/mednafen/mednafen
-# command=%l %r
+# command=%r
 #
 # Example GNU/Linux Configuration
 # [SNES9X-GTK]
 # location=/usr/bin/snes9x-gtk
-# command=%l %r
+# command=%r
