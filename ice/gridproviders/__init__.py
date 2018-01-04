@@ -11,4 +11,5 @@ __all__ = [
     "grid_image_provider",
     "local_provider",
     "thegamesdb_provider",
+    "retrogamingcloud_provider",
 ]
