@@ -1,4 +1,4 @@
-![Example of Ice](ice-example.png "Example")
+![Example of Ice using thegamesdb.net boxart images](ice-example-new.png "Example")
 
 ##Ice
 
