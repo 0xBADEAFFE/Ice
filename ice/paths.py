@@ -6,7 +6,11 @@ import os
 def application_data_directory():
   # Parameters are 'App Name' and 'App Author'
   # TODO: Get these values from the same place as setup.py
-  return appdirs.user_data_dir("Ice", "Scott Rice")
+  app_data_directory = appdirs.user_data_dir("Ice", "Scott Rice")
+  if not os.path.exists(app_data_directory):
+    os.makedirs(app_data_directory)
+  
+  return app_data_directory
 
 def data_file_path(filename):
   return os.path.join(application_data_directory(), filename)
