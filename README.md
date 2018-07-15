@@ -24,6 +24,17 @@ Next, you will need to download all of Ice's dependencies. To do so, run `python
 
 Once all of that is finished, simply run `python -m ice` from the repository's root directory.
 
+#### Use Chocolatey
+Install https://chocolatey.org/
+
+```
+python -m pip install -U pip
+choco install python2`
+cd c:\git\ice` - your git dir
+python setup.py install`
+python -m ice
+```
+
 ### Ice GUI
 
 A GUI for Ice is currently being developed, but is very far from being production ready. As of writing, it is basically non-functional. Do not attempt to use the GUI, doing so will only bring you pain and heartache.
