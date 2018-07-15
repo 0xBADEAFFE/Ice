@@ -3,3 +3,4 @@ pastebin==1.1.0
 psutil==2.1.1
 pysteam==1.0.0-beta2
 requests
+Pillow
