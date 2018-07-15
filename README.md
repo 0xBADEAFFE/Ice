@@ -28,10 +28,10 @@ Once all of that is finished, simply run `python -m ice` from the repository's r
 Install https://chocolatey.org/
 
 ```
+choco install python2
 python -m pip install -U pip
-choco install python2`
-cd c:\git\ice` - your git dir
-python setup.py install`
+cd c:\git\ice - your git dir
+python setup.py install
 python -m ice
 ```
 
