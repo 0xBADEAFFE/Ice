@@ -57,6 +57,8 @@ class EnvironmentChecker(object):
         if p.name().lower().startswith(program_name.lower()):
           return self.requirement_errors.append(
               ProcessRunningError(p.name()))
+          # TODO: Implement config toggle
+          # p.kill()
       except Exception:
         continue
 
