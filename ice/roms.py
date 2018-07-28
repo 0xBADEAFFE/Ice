@@ -23,38 +23,41 @@ import paths
 # have to clean up after myself
 ICE_FLAG_TAG = "~ManagedByIce"
 
+
 def roms_directory(config):
-  option = config.roms_directory
-  if option is None or option == "":
-    return paths.default_roms_directory()
-  else:
-    return option
+    option = config.roms_directory
+    if option is None or option == "":
+        return paths.default_roms_directory()
+    else:
+        return option
+
 
 def rom_shortcut_name(rom):
-  """Calculates what a ROM's name should be when represented as a shortcut in
-  Steam. For the most part this is just the name of the ROM itself, but some
-  Console's provide a prefix which should be appended to the name of the ROM
-  itself."""
-  prefix = rom.console.prefix
-  if prefix:
-    return "%s %s" % (prefix, rom.name)
-  else:
-    return rom.name
+    """Calculates what a ROM's name should be when represented as a shortcut in
+    Steam. For the most part this is just the name of the ROM itself, but some
+    Console's provide a prefix which should be appended to the name of the ROM
+    itself."""
+    prefix = rom.console.prefix
+    if prefix:
+        return "%s %s" % (prefix, rom.name)
+    else:
+        return rom.name
+
 
 def rom_to_shortcut(rom):
-  emu = rom.console.emulator
-  assert(emu is not None)
+    emu = rom.console.emulator
+    assert(emu is not None)
 
-  return model.Shortcut(
-    name                  = rom_shortcut_name(rom),
-    exe                   = emulators.emulator_rom_launch_command(emu, rom),
-    startdir              = emulators.emulator_startdir(emu),
-    icon                  = rom.console.icon,
-    shortcut_path         = "",
-    launch_options        = "",
-    hidden                = False,
-    allow_desktop_config  = True,
-    open_vr               = False,
-    last_play_time        = 0,
-    tags                  = [rom.console.fullname]
-  )
+    return model.Shortcut(
+        name = rom_shortcut_name(rom),
+        exe = emulators.emulator_rom_exe(emu),
+        startdir = emulators.emulator_startdir(emu),
+        icon = rom.console.icon,
+        shortcut_path = "",
+        launch_options = emulators.emulator_rom_launch_options(emu, rom),
+        hidden = False,
+        allow_desktop_config = True,
+        open_vr = False,
+        last_play_time = 0,
+        tags = [rom.console.fullname]
+    )
