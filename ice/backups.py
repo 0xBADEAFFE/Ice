@@ -40,14 +40,14 @@ def backup_directory(config):
     logger.debug("Specified empty string as backup directory. Defaulting to %s" % backup_dir)
   return backup_dir
 
-def create_backup_of_shortcuts(config, user, dry_run=False):
-  def _create_directory_if_needed(directory):
+def _create_directory_if_needed(directory):
     if os.path.exists(directory):
       return
 
     logger.debug("Creating directory: %s" % directory)
     os.makedirs(directory)
 
+def create_backup_of_shortcuts(config, user, dry_run=False):
   backup_dir = backup_directory(config)
   if backup_dir is None:
     logger.info("No backups directory specified, so not backing up shortcuts.vdf before overwriting. See config.txt for more info")
@@ -64,4 +64,5 @@ def create_backup_of_shortcuts(config, user, dry_run=False):
   # Make sure the user-specific backups dir exists
   _create_directory_if_needed(os.path.dirname(backup_path))
 
-  shortcuts.write_shortcuts(backup_path, shortcuts.get_shortcuts(user))
+  shortcuts_list = shortcuts.get_shortcuts(user)
+  shortcuts.write_shortcuts(backup_path, [x for x in shortcuts_list if x is not None])
