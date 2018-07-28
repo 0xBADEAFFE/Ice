@@ -9,7 +9,7 @@ df = [
 ]
 
 a = Analysis(['ice\\__main__.py'],
-             pathex=['c:\\Users\\Scott\\Development\\Projects\\Ice\\ice'],
+             pathex=['E:\src\Ice\ice'],
              binaries=None,
              datas=map(lambda f: (f, ''), df),
              hiddenimports=[],

@@ -24,10 +24,18 @@ Next, you will need to download all of Ice's dependencies. To do so, run `python
 
 Once all of that is finished, simply run `python -m ice` from the repository's root directory.
 
+### Build Ice executable
+
+```
+pip install -r requirements.txt
+pip install pyinstaller
+pyinstaller Ice.spec
+```
+
 #### Use Chocolatey
 Install https://chocolatey.org/
 
-```
+
 choco install python2
 python -m pip install -U pip
 cd c:\git\ice - your git dir
