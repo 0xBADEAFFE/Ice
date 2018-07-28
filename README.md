@@ -35,7 +35,7 @@ pyinstaller Ice.spec
 #### Use Chocolatey
 Install https://chocolatey.org/
 
-
+```
 choco install python2
 python -m pip install -U pip
 cd c:\git\ice - your git dir
