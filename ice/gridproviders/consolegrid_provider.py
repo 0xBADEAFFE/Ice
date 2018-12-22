@@ -66,4 +66,5 @@ class ConsoleGridProvider(grid_image_provider.GridImageProvider):
     image_url = self.find_url_for_rom(rom)
     if image_url is None or image_url == "":
       return None
+    logger.debug('Found consolegrid image %s %s',rom.path,image_url)
     return self.download_image(image_url)
