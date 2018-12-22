@@ -1,3 +1,5 @@
+# NOTE: API changed (https://api.thegamesdb.net/)!
+# API Key: https://api.thegamesdb.net/key.php
 #!/usr/bin/env python
 # encoding: utf-8
 """
@@ -26,10 +28,12 @@ class TheGamesDBProvider(grid_image_provider.GridImageProvider):
     @staticmethod
     def api_url_findId():
         return "http://thegamesdb.net/api/GetGamesList.php?name="
+        # "https://api.thegamesdb.net/Games/ByGameName?name="
 
     @staticmethod
     def api_url_getArt():
         return "http://thegamesdb.net/api/GetArt.php?id="
+        # "https://api.thegamesdb.net//Games/Images?games_id="
 
     def http_get(self, url):
         return requests.get(url, {'User-agent': self.user_agent()})
