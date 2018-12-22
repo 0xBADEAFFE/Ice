@@ -43,13 +43,15 @@ Userdata Directory=
 #
 # * `local`       - Looks in the `custom_images_directory` of the Console for
 #                   a game of the same name.
-# * `consolegrid` - Hits the ConsoleGrid API looking for a game of that name.
+# * `consolegrid` - Hits the ConsoleGrid API looking for a game of that name. NOT WORKING!
 #
-# * `thegamesdb`  - Hits the TheGamesDB API looking for a game of that name.
+# * `thegamesdb`  - Hits the TheGamesDB API looking for a game of that name. NOT WORKING!
+#
+# * `retrogamingcloud` - Hits the Retro Gaming Cloud API looking for a game of that name.
 #
 # Ice will ask these providers for images in order, stopping when it one is
-# found. This means order matters, and `local, consolegrid, thegamesdb` is not the same as
-# `consolegrid, local, thegamesdb`.
+# found. This means order matters, and `local, consolegrid, thegamesdb retrogamingcloud` is not the same as
+# `consolegrid, local, thegamesdb, retrogamingcloud`.
 #
-# The default is `local, consolegrid, thegamesdb`
-Providers=local, thegamesdb
+# The default is `local, consolegrid, thegamesdb, retrogamingcloud`
+Providers=local, retrogamingcloud
